@@ -1,7 +1,7 @@
 import tkinter
 
 class main_class:
-    def __init__(self):
+    def __init__(self,initial):
         #基本となるフレームをインスタンス
         root = tkinter.Tk()
 
@@ -30,7 +30,7 @@ class main_class:
         #場所決め
         self.txt.place(x=90, y=70)
         #文字初期値挿入
-        self.txt.insert(tkinter.END,"initial")
+        self.txt.insert(tkinter.END,initial)
 
         self.txt2 = tkinter.Entry(width=20)
         self.txt2.place(x=90, y=100)
@@ -50,5 +50,5 @@ class main_class:
         self.txt2.insert(tkinter.END,get_data)
 
 
-instance=main_class()
+instance=main_class("初期値")
 
