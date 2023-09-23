@@ -26,11 +26,17 @@ class main_class:
 
     # clickイベント
     def btn_click(self):
-
         pass
+
+    def __del__(self):
+        print('デストラクタ実行')
+
+
 
 def class_start():
     instance=main_class()
+    time.sleep(5)
+    del(instance)
 
 thread=threading.Thread(target=class_start)
 thread.start()
